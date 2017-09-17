@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">IksmViewer</string>
+    <string name="nawabari">ナワバリ</string>
+    <string name="yagura">ガチエリア</string>
+    <string name="area">ガチヤグラ</string>
+    <string name="hoko">ガチホコ</string>
+    <string name="detail_button">Detail</string>
+    <string name="zero">0</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="version_default">0.0.0</string>
+    <string name="victory">victory</string>
+    <string name="defeat">defeat</string>
+    <string name="title_activity_by_stage">ByStageActivity</string>
+    <string name="title_activity_by_weapon">ByWeaponActivity</string>
 </resources>
