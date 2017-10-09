@@ -19,14 +19,15 @@ class ByStageActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_by_stage)
+
+        RULE = intent.getStringExtra("rule") ?: ""
+
         val toolbar = findViewById(R.id.toolbar) as Toolbar
+        toolbar.title = RULE
         setSupportActionBar(toolbar)
 
         val realm = (application as MyApplication).realm
         databaseHelper = DatabaseHelper(realm)
-
-        RULE = intent.getStringExtra("rule") ?: ""
-        toolbar.title = RULE
 
         createTable(databaseHelper.selectAllStage().toList())
     }

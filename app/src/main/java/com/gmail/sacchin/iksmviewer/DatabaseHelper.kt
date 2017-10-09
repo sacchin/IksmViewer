@@ -157,6 +157,9 @@ class DatabaseHelper(val realm: Realm) {
             todoModel9.name = "マンタマリア号"
             val todoModel10 = it.createObject(StageMaster::class.java)
             todoModel10.name = "モズク農園"
+            val todoModel11 = it.createObject(StageMaster::class.java)
+            todoModel11.name = "エンガワ河川敷"
+
             it.copyToRealm(todoModel1)
             it.copyToRealm(todoModel2)
             it.copyToRealm(todoModel3)
@@ -167,6 +170,7 @@ class DatabaseHelper(val realm: Realm) {
             it.copyToRealm(todoModel8)
             it.copyToRealm(todoModel9)
             it.copyToRealm(todoModel10)
+            it.copyToRealm(todoModel11)
         }
     }
 
@@ -174,13 +178,13 @@ class DatabaseHelper(val realm: Realm) {
     fun insertRules() {
         realm.executeTransaction {
             val todoModel1 = it.createObject(RuleMaster::class.java)
-            todoModel1.name = "ナワバリ"
+            todoModel1.name = "ナワバリバトル"
             val todoModel2 = it.createObject(RuleMaster::class.java)
             todoModel2.name = "ガチエリア"
             val todoModel3 = it.createObject(RuleMaster::class.java)
             todoModel3.name = "ガチヤグラ"
             val todoModel4 = it.createObject(RuleMaster::class.java)
-            todoModel4.name = "ガチホコ"
+            todoModel4.name = "ガチホコバトル"
             it.copyToRealm(todoModel1)
             it.copyToRealm(todoModel2)
             it.copyToRealm(todoModel3)
@@ -200,7 +204,9 @@ class DatabaseHelper(val realm: Realm) {
     }
 
     fun insertWeapons() {
+        //name, paint, attack, max, min
         insertWeapon("パラシェルター", 3.3f, 2.5f, 90f, 12.9f)
+        insertWeapon("キャンピングシェルター", 4.0f, 1.5f, 120f, 30.0f)
         insertWeapon("スパッタリー", 2.9f, 2f, 36f, 18f)
         insertWeapon("スプラマニューバー", 3.5f, 2.5f, 28f, 15.8f)
         insertWeapon("スプラマニューバーコラボ", 3.5f, 2.5f, 28f, 15.8f)
@@ -232,13 +238,16 @@ class DatabaseHelper(val realm: Realm) {
         insertWeapon("スプラスコープ", 6.1f, 5.7f, 160f, 40f)
         insertWeapon("スプラチャージャーコラボ", 5.7f, 5.3f, 160f, 40f)
         insertWeapon("スプラスコープコラボ", 6.1f, 5.7f, 160f, 40f)
+        insertWeapon("14式竹筒銃・甲", 6.0f, 4.3f, 80f, 30f)
         insertWeapon("スクイックリンα", 4.2f, 3.8f, 140f, 40f)
         insertWeapon("ノヴァブラスター", 2.2f, 2.2f, 125f, 50f)
         insertWeapon("ホットブラスターカスタム", 2.7f, 2.7f, 125f, 50f)
         insertWeapon("ホットブラスター", 2.7f, 2.7f, 125f, 50f)
         insertWeapon("クラッシュブラスター", 2.2f, 2.5f, 60f, 30f)
         insertWeapon("ラピッドブラスター", 3.5f, 3.7f, 85f, 35f)
+        insertWeapon("ラピッドブラスターエリート", 4.0f, 4.2f, 85f, 35f)
         insertWeapon("バレルスピナー", 5.4f, 4.6f, 28f, 14f)
+        insertWeapon("バレルスピナーデコ", 5.4f, 4.6f, 28f, 14f)
         insertWeapon("スプラスピナー", 4f, 2.8f, 28f, 14f)
         insertWeapon("ヒッセン", 2.8f, 2.5f, 62f, 62f)
         insertWeapon("バケットスロッシャー", 3.2f, 3f, 70f, 70f)

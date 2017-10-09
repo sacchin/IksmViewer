@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">IksmViewer</string>
-    <string name="nawabari">ナワバリ</string>
+    <string name="nawabari">ナワバリバトル</string>
     <string name="yagura">ガチエリア</string>
     <string name="area">ガチヤグラ</string>
-    <string name="hoko">ガチホコ</string>
+    <string name="hoko">ガチホコバトル</string>
     <string name="detail_button">Detail</string>
     <string name="zero">0</string>
     <string name="title_activity_main2">Main2Activity</string>

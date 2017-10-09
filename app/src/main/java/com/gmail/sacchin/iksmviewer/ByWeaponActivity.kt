@@ -19,17 +19,17 @@ class ByWeaponActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_by_weapon)
-        val toolbar = findViewById(R.id.toolbar) as Toolbar
-        setSupportActionBar(toolbar)
-
-        val realm = (application as MyApplication).realm
-        databaseHelper = DatabaseHelper(realm)
 
         STAGE = intent.getStringExtra("stage") ?: ""
         RULE = intent.getStringExtra("rule") ?: ""
 
+        val toolbar = findViewById(R.id.toolbar) as Toolbar
         toolbar.title = "$RULE:$STAGE"
+        setSupportActionBar(toolbar)
 
+        val realm = (application as MyApplication).realm
+        databaseHelper = DatabaseHelper(realm)
+        
         createTable(databaseHelper.selectAllWeapon().toList())
     }
 
